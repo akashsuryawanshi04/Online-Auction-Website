@@ -1,0 +1,230 @@
+/* Resetting default margin and padding */
+*{
+    margin: o;
+    padding: o;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body{
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ff9933;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Styles */
+.container{
+    max-width: 400px;
+    margin: 50px a;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    /* margin-left: 200px;
+    justify-content: space-evenly; */
+}
+
+/* Header Styles */
+header h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+/* Form group styles */
+.form-group{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust as needed */
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Label styles */
+label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Input field styles */
+input[type="text"],
+input[type="password"]{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus{
+    border-color: #5bc0de;
+}
+
+input[type="text"],
+input[type="confirm"]{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+    font-size: 16px;
+}
+
+/* Login button styles */
+button[type="submit"]{
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]{
+    background-color: #45a049;
+}
+
+/* Sign up link styles */
+.signup-link{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.signup-link a{
+    color: #1877f2;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signup-link a:hover{
+    color: #1877f2;
+}
+
+footer{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+/* Inside Product */
+ 
+.ip-container {
+     max-width: 100%;
+     margin: 0 auto;
+     padding: 20px;
+     background-color: bisque;
+ }
+ 
+ .ip-product-details {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 3rem auto;
+     margin-left: 3rem;
+     margin-right: 3rem;
+     border: 1px solid #ced4da;
+     padding: 1rem;
+     background-color: #fff;
+     border-radius: 8px;
+     box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+     
+ }
+
+ .ip-countdown-timer {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     font-size: 1.2rem;
+     color: #333;
+ }
+ 
+ .ip-product-image {
+     flex: 1;
+     margin-right: 1rem;
+ }
+ 
+ .ip-product-image img {
+     max-width: 100%;
+     height: auto;
+ }
+ 
+ .ip-product-info {
+     flex: 2;
+     border-left: 1px solid #ced4da; /* Add left border */
+     padding-left: 20px; /* Add padding for spacing */
+     height: 100%; /* Set height to 100% */
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
+ 
+ .ip-product-info h2 {
+     font-size: 2rem;
+     margin-bottom: 1rem;
+     color: #333;
+ }
+ 
+ .ip-product-info p {
+     margin-bottom: 1rem;
+     color: #555;
+ }
+ 
+ .ip-base-price {
+     font-size: 1.5rem;
+     font-weight: bold;
+     color: #333;
+     margin-bottom: 1rem;
+ }
+ 
+ .ip-bid-now-button {
+     display: inline-block;
+     padding: 0.8rem 1.5rem;
+     background-color: #007bff;
+     color: #fff;
+     border: none;
+     border-radius: 4px;
+     font-size: 1rem;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+     text-decoration: none;
+ }
+ 
+ .ip-bid-now-button:hover {
+     background-color: #0056b3;
+ }
+ 
+ #bid-amount {
+     padding: 0.5rem; /* Add padding for spacing inside the input box */
+     border: 1px solid #ced4da; /* Add border for visual clarity */
+     border-radius: 4px; /* Add border radius for rounded corners */
+     font-size: 1rem; /* Adjust font size */
+     height: 40px; /* Increase the height of the input box */
+     width: 100%; /* Make the input box expand to fill its container */
+     box-sizing: border-box; /* Include padding and border in the element's total width and height */
+     margin-bottom: 1rem; /* Add some space below the input box */
+ }
+ 
+
+ /* end inside product */

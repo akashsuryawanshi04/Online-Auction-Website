@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="file"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Increase font size of options */
+        select optgroup {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        select option {
+            font-size: 14px;
+            font-weight:600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Add New Product</h1>
+        <form id="product-form" action="NewProduct" method="post" enctype="multipart/form-data">
+
+            <label for="product-image">Product Image:</label>
+            <input type="file" id="picture" name="picture"  required>
+
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="productName" name="productName" required>
+
+            <label for="product-type">Product Type:</label>
+            <select id="product-type" name="product-type" onchange="toggleSubtypes()" required>
+                <option value="" disabled selected>Select Product Type</option>
+                <option value="type1">Antiques</option>
+                <option value="type2">Art</option>
+                <option value="type3">Collectibles & Memorabilla</option>
+            </select>
+
+            <label for="sub-type">Sub Type:</label>
+            <select id="type" name="type" required>
+                <option value="" disabled selected>Select Sub Type</option>
+                <!-- Options for Sub Type 1 -->
+                <optgroup label="Antiques" id="sub-type-type1" style="display: none;">
+                    <option value="Antique Art">Antique Art</option>
+                    <option value="Decorative Items ">Decorative Items</option>
+                    <option value="Tools & Equipments">Tools & Equipments</option>
+                    <option value="Clocks & Timepieces">Clocks & Timepieces</option>
+                </optgroup>
+                <!-- Options for Sub Type 2 -->
+                <optgroup label="Art" id="sub-type-type2" style="display: none;">
+                    <option value="Painting">Painting</option>
+                    <option value="Sculpture">Sculpture</option>
+                    <option value="Digital Art">Digital Art</option>
+                    <option value="Textiles & Clothes">Textiles & Clothes</option>
+                </optgroup>
+                <!-- Options for Sub Type 3 -->
+                <optgroup label="Collectibles & Memorabilla" id="sub-type-type3" style="display: none;">
+                    <option value="Currency">Currency</option>
+                    <option value="Stamps">Stamps</option>
+                    <option value="Sports Memorable">Sports Memorable</option>
+                    <option value="Trading Cards">Trading Cards</option>
+                </optgroup>
+            </select>
+
+            <label for="product-description">Product Description:</label>
+            <textarea id="product-description" name="description" required></textarea>
+
+            <label for="base-price">Base Price:</label>
+            <input type="number" id="base-price" name="price" required>
+
+            
+
+            <input type="submit" value="Add Product">
+        </form>
+    </div>
+
+    <script>
+        function toggleSubtypes() {
+            var productType = document.getElementById("product-type").value;
+            var subTypeGroups = document.querySelectorAll("#sub-type > optgroup");
+            
+            for (var i = 0; i < subTypeGroups.length; i++) {
+                subTypeGroups[i].style.display = "none";
+            }
+
+            if (productType !== "") {
+                var subTypeGroup = document.getElementById("sub-type-" + productType);
+                if (subTypeGroup) {
+                    subTypeGroup.style.display = "block";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
