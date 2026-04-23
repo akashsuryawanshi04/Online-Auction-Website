@@ -71,6 +71,7 @@ public class AddCartItemServlet extends HttpServlet {
         processRequest(request, response);
     }
 
+    // Method Override 
     @Override
     public String getServletInfo() {
         return "Servlet for adding cart items";
