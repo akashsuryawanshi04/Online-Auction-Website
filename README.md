@@ -1,7 +1,7 @@
 # 🏷️ Auction Web Application – Bid & Win Antiques
 
 An interactive online auction platform built using **Java Servlets**, **JSP**, **HTML/CSS**, and **MySQL** that allows users to register, add antique products, place bids, and view their bids in real time. Perfect for learning how real e-commerce bidding systems work!
-
+No admin page here, cause buyers and sellers are present here.
 ---
 
 ## 🚀 Features
